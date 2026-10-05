@@ -2,7 +2,7 @@
 
 - **Aprendiz:** _Angel Toledo_ — **Ficha:** _3409924_
 - **Tecnología usada:** React 18 + Vite
-- **Repositorio:** _https://github.com/usuario/Apellido_Nombre_CarritoReact_
+- **Repositorio:** https://github.com/bel0513/Toledo-Ramos_carritoReact.git
 
 ## Instalar y ejecutar
 

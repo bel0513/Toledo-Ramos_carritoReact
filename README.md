@@ -1,14 +1,14 @@
 # Carrito de Compras – TIENDA PALMIRA
 
-- **Aprendiz:** _Nombre Apellido_ — **Ficha:** _000000_
+- **Aprendiz:** _Angel Toledo_ — **Ficha:** _3409924_
 - **Tecnología usada:** React 18 + Vite
-- **Repositorio:** _https://github.com/usuario/Apellido_Nombre_CarritoReact_
+- **Repositorio:** https://github.com/bel0513/Toledo-Ramos_carritoReact.git
 
 ## Instalar y ejecutar
 
 ```bash
 git clone <URL-del-repositorio>
-cd Apellido_Nombre_CarritoReact
+cd Toledo_Ramos_CarritoReact
 npm install
 npm run dev
 ```

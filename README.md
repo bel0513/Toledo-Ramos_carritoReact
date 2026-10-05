@@ -1,8 +1,8 @@
 # Carrito de Compras – TIENDA PALMIRA
 
-- **Aprendiz:** _Angel Toledo_ — **Ficha:** _3409924_
+- **Aprendiz:** _Nombre Apellido_ — **Ficha:** _000000_
 - **Tecnología usada:** React 18 + Vite
-- **Repositorio:** https://github.com/bel0513/Toledo-Ramos_carritoReact.git
+- **Repositorio:** _https://github.com/usuario/Apellido_Nombre_CarritoReact_
 
 ## Instalar y ejecutar
 
@@ -23,6 +23,8 @@ src/
 └── components/
     ├── Navbar.jsx  Producto.jsx  Carrito.jsx
     ├── LineaCarrito.jsx  CantidadInput.jsx  Toasts.jsx
+    └── Logo.jsx  ImagenProducto.jsx
+(hooks/useImagenes.js guarda las imágenes insertadas)
 ```
 
 ## Evidencias (carpeta `/evidencias`)

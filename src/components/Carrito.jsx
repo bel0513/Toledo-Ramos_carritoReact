@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import LineaCarrito from "./LineaCarrito";
 import { COP } from "../utils/formato";
 
-export default function Carrito({ items, cerrar, fijar, quitar, avisar }) {
+export default function Carrito({ items, cerrar, fijar, quitar, avisar, imagenes }) {
   const unidades = items.reduce((s, i) => s + i.cantidad, 0);
   const total = items.reduce((s, i) => s + i.cantidad * i.precio, 0);
 
@@ -25,7 +25,7 @@ export default function Carrito({ items, cerrar, fijar, quitar, avisar }) {
             <p className="vacio">Aún no hay productos. Agrega algo del catálogo.</p>
           ) : (
             items.map((it) => (
-              <LineaCarrito key={it.id} item={it} fijar={fijar} quitar={quitar} avisar={avisar} />
+              <LineaCarrito key={it.id} item={it} fijar={fijar} quitar={quitar} avisar={avisar} imagen={imagenes[it.id]} />
             ))
           )}
         </div>

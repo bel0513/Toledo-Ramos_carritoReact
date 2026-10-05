@@ -1,8 +1,14 @@
+import Logo from "./Logo";
+
 export default function Navbar({ unidades, abrir }) {
   return (
     <header className="nav">
       <div className="marca">
-        Tienda Palmira<small>Productos típicos de la región</small>
+        <Logo />
+        <div>
+          <span className="m1">Tienda</span>
+          <span className="m2">Palmira</span>
+        </div>
       </div>
       <button className="cartbtn" onClick={abrir} aria-label={`Abrir carrito, ${unidades} unidades`}>
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { PRODUCTOS } from "./data/productos";
 import { MSG_MAX } from "./utils/formato";
 import useToasts from "./hooks/useToasts";
+import useImagenes from "./hooks/useImagenes";
 import Navbar from "./components/Navbar";
 import Producto from "./components/Producto";
 import Carrito from "./components/Carrito";
@@ -14,6 +15,7 @@ export default function App() {
   });
   const [abierto, setAbierto] = useState(false);
   const { toasts, avisar, cerrar } = useToasts();
+  const { imagenes, elegir, quitar: quitarImagen } = useImagenes(avisar);
 
   useEffect(() => {
     localStorage.setItem("carrito-palmira", JSON.stringify(items));
@@ -50,13 +52,16 @@ export default function App() {
               producto={p}
               agregar={agregar}
               avisar={avisar}
+              imagen={imagenes[p.id]}
+              elegirImagen={elegir}
+              quitarImagen={quitarImagen}
               enCarrito={items.find((i) => i.id === p.id)?.cantidad || 0}
             />
           ))}
         </section>
       </main>
       {abierto && (
-        <Carrito items={items} cerrar={() => setAbierto(false)} fijar={fijar} quitar={quitar} avisar={avisar} />
+        <Carrito items={items} cerrar={() => setAbierto(false)} fijar={fijar} quitar={quitar} avisar={avisar} imagenes={imagenes} />
       )}
       <Toasts toasts={toasts} cerrar={cerrar} />
     </>

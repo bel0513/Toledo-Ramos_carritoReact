@@ -1,7 +1,7 @@
 import CantidadInput from "./CantidadInput";
 import { COP, MSG_MAX } from "../utils/formato";
 
-export default function LineaCarrito({ item, fijar, quitar, avisar }) {
+export default function LineaCarrito({ item, fijar, quitar, avisar, imagen }) {
   // PUNTO 6: mínimo 1 -> toast con opción de eliminar
   const pedirEliminar = () =>
     avisar(`Esta es la cantidad mínima. ¿Desea eliminar "${item.nombre}" del carrito?`, {
@@ -12,7 +12,8 @@ export default function LineaCarrito({ item, fijar, quitar, avisar }) {
   return (
     <div className="item">
       <div className="top">
-        <span>{item.nombre}</span>
+        {imagen && <img className="mini-foto" src={imagen} alt="" />}
+        <span className="nom">{item.nombre}</span>
         <span>{COP.format(item.precio)}</span>
       </div>
       <div className="ctl">

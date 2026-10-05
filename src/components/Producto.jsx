@@ -1,13 +1,16 @@
 import { useState } from "react";
 import CantidadInput from "./CantidadInput";
+import ImagenProducto from "./ImagenProducto";
 import { COP, MSG_MAX, MSG_MIN } from "../utils/formato";
 
-export default function Producto({ producto: p, enCarrito, agregar, avisar }) {
+export default function Producto({ producto: p, enCarrito, agregar, avisar, imagen, elegirImagen, quitarImagen }) {
   const [cant, setCant] = useState(1);
   const sinStock = p.stock - enCarrito <= 0;
 
   return (
     <article className="prod">
+      <ImagenProducto src={imagen} nombre={p.nombre}
+        elegir={(f) => elegirImagen(p.id, f)} quitar={() => quitarImagen(p.id)} />
       <h2>{p.nombre}</h2>
       <div className="precio">{COP.format(p.precio)}</div>
       <div className="stock">
